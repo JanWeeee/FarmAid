@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home - FarmAid</title>
+</head>
+
+<body>
+    <app-adminnav></app-adminnav>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Welcome to the Admin Dashboard</h1>
+            <p>Manage all aspects of the FarmAid platform from here.</p>
+        </header>
+        <main class="admin-main">
+            <section class="admin-section">
+                <h2>Overview</h2>
+                <p>This section provides an overview of the platform's performance and statistics.</p>
+            </section>
+            <section class="admin-section">
+                <h2>Manage Users</h2>
+                <p>View and manage all registered users.</p>
+            </section>
+            <section class="admin-section">
+                <h2>Manage Loans</h2>
+                <p>Review and approve loan applications.</p>
+            </section>
+            <section class="admin-section">
+                <h2>Feedback</h2>
+                <p>Read and respond to user feedback.</p>
+            </section>
+        </main>
+    </div>
+</body>
+
+<footer class="footer">
+    <div class="left">
+        <a routerLink="/api/about">About Us</a>
+        <a routerLink="/api/contact">Contact Us</a>
+    </div>
+    <div class="right">
+        <img src="assets/logo.png" alt="Logo">
+    </div>
+    <div class="copyright">
+        &copy; 2024 FarmAid. All rights reserved.
+    </div>
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        &#8679;
+    </div>
+</footer>
+
+</html>

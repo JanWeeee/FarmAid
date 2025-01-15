@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: -1.5vh;
+}
+
+.about-container h1,
+.about-container h2 {
+    color: #333;
+}
+
+.about-container p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.team-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    width: calc(33% - 20px);
+    max-width: 180px;
+    text-align: center;
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px;
+}
+
+.team-card h3 {
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.team-card p {
+    margin: 0 0 10px 0;
+    color: #777;
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(116, 201, 11, 0.6); 
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-size: cover;
+    min-height: 20vh;
+    margin-left: -2vh;
+    margin-right: 6vh;
+    
+}
+
+.footer .left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .left a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer .right img {
+    width: 300px;
+    margin-left: 40vh;
+}
+
+.footer .copyright {
+    position: center;
+    text-align: center;
+    color: #000;
+    bottom: 10px;
+    left: 20px;
+    font-size: 16px;
+    margin-top: -2vh;
+
+}
+/* 
+.back-to-top {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: #000;
+    margin-bottom: -5vh;
+    margin-right: 20px; 
+} */
+
+.back-to-top {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(194, 232, 138, 0.958);
+    border-radius: 50%;
+  }
+  
+  .about-container img {
+    width: 180px;
+  }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmAid</title>
+</head>
+
+<body>
+    <div class="nav-container">
+        <div class="logo">
+            <a routerLink="/api/userhome" style="cursor: pointer;">
+                <img  src="assets/logo.png" alt="FarmAid Logo" class="navbar-logo">
+            </a>
+        </div>
+        <div class="menu">
+            <p style="cursor: pointer; padding-right: 40px;" >  {{username}} / {{userRole}}   </p>
+            <a routerLink="/api/dashboard" style="cursor: pointer; padding-right: 40px;">Dashboard</a>
+            <div class="dropdown">
+                <button style="cursor: pointer; padding-right: 40px;">Loan</button>
+                <div class="dropdown-options">
+                    <a routerLink="/api/userviewloan">View Loan</a>
+                    <a routerLink="/api/userappliedloan">Applied Loan</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button style="cursor: pointer; padding-right: 40px;">Feedback</button>
+                <div class="dropdown-options">
+                    <a routerLink="/api/useraddfeedback">Post Feedback</a>
+                    <a routerLink="/api/userviewfeedback">My Feedbacks</a>
+                </div>
+            </div>
+            <button class="btn btn-danger common-style" (click)="confirmLogout()" style="cursor: pointer; padding-right: 40px;">Logout</button>
+        </div>
+    </div>
+</body>
+
+<!-- Logout Confirmation Modal -->
+<div *ngIf="showLogoutModal" class="modal">
+    <div class="modal-content">
+        <span class="close" (click)="closeLogoutModal()">&times;</span>
+        <p>Are you sure you want to logout?</p>
+        <button class="btn-yes" (click)="logout()">Yes, I am sure</button>
+        <button class="btn-no"(click)="closeLogoutModal()">No</button>
+    </div>
+</div>
+</html>

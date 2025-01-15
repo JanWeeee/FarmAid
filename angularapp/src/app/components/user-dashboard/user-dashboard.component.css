@@ -1,0 +1,136 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center align items horizontally */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 7%;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.msg {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.chart-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.chart-container {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+}
+
+.chart-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.chart-container p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove grid lines from bar chart */
+#barChart {
+  border: none;
+}
+
+.chartjs-render-monitor {
+  border: none !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #74c90b;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-size: cover;
+  min-height: 20vh;
+}
+
+.footer .left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .left a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer .right img {
+  width: 300px;
+  margin-left: 40vh;
+}
+
+.footer .copyright {
+  position: center;
+  text-align: center;
+  color: #000;
+  bottom: 10px;
+  left: 20px;
+  font-size: 16px;
+  margin-top: -2vh;
+
+}
+
+/* 
+.back-to-top {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  color: #000;
+  margin-bottom: -5vh;
+  margin-right: 20px; 
+} */
+
+
+.back-to-top {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(194, 232, 138, 0.958);
+  border-radius: 50%;
+}

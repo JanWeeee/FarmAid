@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmAid</title>
+    
+</head>
+
+<body>
+        <div class="nav-container">
+            <div class="logo">
+                <a routerLink="/api/adminhome" style="cursor: pointer;">
+                    <img src="assets/logo.png" alt="FarmAid Logo" class="navbar-logo">
+                </a>
+            </div>
+            <div class="menu">
+                <p style="cursor: pointer; padding-right: 40px;"  >{{username}} / {{userRole}}</p>
+                <div class="dropdown">
+                    <button style="cursor: pointer; padding-right: 40px;">Loan</button>
+                    <div class="dropdown-options">
+                        <a routerLink="/api/creatloan">Add Loan</a>
+                        <a routerLink="/api/viewloan">View Loan</a>
+                    </div>
+                </div>
+                <a routerLink="/api/requestedloan" class="common-style" style="cursor: pointer; padding-right: 40px;">Loan
+                    Requested</a>
+                <a routerLink="/api/adminviewfeedback" class="common-style" style="cursor: pointer; padding-right: 40px;">Feedbacks</a>
+                <button class="btn btn-danger common-style" (click)="confirmLogout()" style="cursor: pointer; padding-right: 40px;">Logout</button>
+            </div>
+        </div>
+
+        <!-- Logout Confirmation Modal -->
+        <div *ngIf="showLogoutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" (click)="closeLogoutModal()">&times;</span>
+                <p>Are you sure you want to logout?</p>
+                <button class="btn-yes" (click)="logout()">Yes, I am sure</button>
+                <button class="btn-no" (click)="closeLogoutModal()">No</button>
+            </div>
+        </div>
+
+        <div class="flex-grow-1"></div> <!-- This div takes up the remaining space -->    
+</body>
+
+<!-- <footer class="footer">
+    <div class="left">
+        <a routerLink="api/about">About Us</a>
+        <a routerLink="api/contact">Contact Us</a>
+    </div>
+    <div class="right">
+        <img src="assets/logo.png" alt="Logo">
+    </div>
+    <div class="copyright">
+        &copy; 2024 FarmAid. All rights reserved.
+    </div>
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        &#8679;
+    </div>
+</footer>
+   
+ -->
+ </html>

@@ -1,0 +1,67 @@
+.navbar {
+  width: 100%;
+  background-color: rgb(116, 201, 11, 0.6);
+  background-blend-mode: color-dodge; /* Make the navbar transparent */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0; /* Ensure the navbar starts from the left edge */
+  right: 0;
+  z-index: 100;
+  margin-right: -30px;
+
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #16423C;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #16423C;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links a::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  background: #16423C; /* Change this to your desired color */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust this value to position the underline closer/farther */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #0B3A2C;
+}

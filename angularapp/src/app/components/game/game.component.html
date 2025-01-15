@@ -1,0 +1,10 @@
+<div class="container mt-5 pt-5 text-center">
+    <h1>Mini Farming Game</h1>
+    <div id="farm">
+        <img id="crop" src="assets/crop.png" alt="Crop">
+        <button id="waterButton" (click)="waterCrop()">Water Crop</button>
+        <button id="harvestButton" (click)="harvestCrop()">Harvest Crop</button>
+        <button id="sellButton" (click)="sellCrop()">Sell Crop</button>
+        <p id="balance">Coins: <span id="coinCount">{{ coins }}</span></p>
+    </div>
+</div>

@@ -1,0 +1,249 @@
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu a,
+.dropdown button,
+.btn-danger {
+  color: #9CA986;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu a:hover,
+.dropdown button:hover,
+.btn-danger:hover {
+  color: #9CA986;
+}
+
+/* Underline effect (same as before) */
+.menu a::after,
+.dropdown button::after,
+.btn-danger::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #9CA986;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu a:hover::after,
+.dropdown button:hover::after,
+.btn-danger:hover::after {
+  visibility: visible;
+  width: 100%;
+}
+
+/* Dropdown styles (same as before) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.dropdown-options a {
+  display: block;
+  padding: 10px 20px;
+  color: #9CA986;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-options a:hover {
+  background-color: #9CA986;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+/* Container and header styles */
+.container {
+  margin-top: 80px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.container h2 {
+  color: #9CA986;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #9CA986;
+}
+
+/* Search and filter container styles */
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  border: 1px solid #9CA986;
+  border-radius: 5px;
+  width: 200px;
+  transition: box-shadow 0.3s;
+}
+
+.search-container input:focus {
+  box-shadow: 0 0 10px rgba(22, 66, 60, 0.5);
+  outline: none;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter-container label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #9CA986;
+}
+
+.filter-container select {
+  padding: 10px;
+  border: 1px solid #9CA986;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+.filter-container select:focus {
+  box-shadow: 0 0 10px rgba(22, 66, 60, 0.5);
+  outline: none;
+}
+
+/* Table styles */
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #9CA986;
+  border-radius: 0px; /* Slightly rounded borders */
+}
+
+th {
+  background-color: #9CA986;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+  background-color: #e6e6e6;
+}
+
+/* Adding a subtle gradient background to the table header */
+th {
+  background: linear-gradient(120deg, #9CA986, #5F6F65);
+  color: white;
+}
+
+.no-records {
+  text-align: center;
+  color: #9CA986;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: shake 1s ease;
+}
+
+/* Button styles */
+.apply-button, .applied-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.apply-button {
+  background-color: #9CA986;
+  color: white;
+}
+
+.apply-button:hover {
+  background-color: #0B3A2C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.applied-button {
+  background-color: #9CA986;
+  color: white;
+}
+
+/* Animation styles */
+@keyframes slideDown {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

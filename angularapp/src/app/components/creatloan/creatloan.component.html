@@ -1,0 +1,89 @@
+<app-adminnav></app-adminnav>
+<div class="background-blur"></div>
+
+<div class="add-loan-container">
+    
+  <h2>Add Loan</h2>
+  <form [formGroup]="loanForm" (ngSubmit)="addLoan()">
+      <div class="form-group">
+          <label for="loanType">Loan Type</label>
+          <input id="loanType" formControlName="loanType" class="form-control" />
+          <div *ngIf="loanForm.get('loanType')?.invalid && loanForm.get('loanType')?.touched" class="validation-message">
+              <div *ngIf="loanForm.get('loanType')?.errors.required">Loan Type is required.</div>
+              <div *ngIf="loanForm.get('loanType')?.errors.minlength">Loan Type must have at least 5 characters.</div>
+              <div *ngIf="loanForm.get('loanType')?.errors.maxlength">Loan Type should not exceed 20 characters.</div>
+              <div *ngIf="loanForm.get('loanType')?.errors.pattern">Loan Type must contain only alphabets.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="description">Description</label>
+          <input id="description" formControlName="description" class="form-control" />
+          <div *ngIf="loanForm.get('description')?.invalid && loanForm.get('description')?.touched" class="validation-message">
+              <div *ngIf="loanForm.get('description')?.errors.required">Description is required.</div>
+              <div *ngIf="loanForm.get('description')?.errors.minlength">Description must have at least 3 characters.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="interestRate">Interest Rate</label>
+          <input id="interestRate" type="number" formControlName="interestRate" class="form-control" />
+          <div *ngIf="loanForm.get('interestRate')?.invalid && loanForm.get('interestRate')?.touched" class="validation-message">
+              <div *ngIf="loanForm.get('interestRate')?.errors.required">Interest Rate is required.</div>
+              <div *ngIf="loanForm.get('interestRate')?.errors.min">Interest Rate must be a positive number.</div>
+              <div *ngIf="loanForm.get('interestRate')?.errors.max">Interest Rate must not exceed 14.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="maximumAmount">Maximum Amount</label>
+          <input id="maximumAmount" type="number" formControlName="maximumAmount" class="form-control" />
+          <div *ngIf="loanForm.get('maximumAmount')?.invalid && loanForm.get('maximumAmount')?.touched" class="validation-message">
+              <div *ngIf="loanForm.get('maximumAmount')?.errors.required">Maximum Amount is required.</div>
+              <div *ngIf="loanForm.get('maximumAmount')?.errors.min">Maximum Amount must be a positive number.</div>
+              <div *ngIf="loanForm.get('maximumAmount')?.errors.max">Maximum amount should not exceed 100000000.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="repaymentTenure">Repayment Tenure (in months)</label>
+          <input id="repaymentTenure" type="number" formControlName="repaymentTenure" class="form-control" />
+          <div *ngIf="loanForm.get('repaymentTenure')?.invalid && loanForm.get('repaymentTenure')?.touched" class="validation-message">
+              <div *ngIf="loanForm.get('repaymentTenure')?.errors.required">Repayment Tenure is required.</div>
+              <div *ngIf="loanForm.get('repaymentTenure')?.errors.min">Repayment Tenure must be a positive number.</div>
+              <div *ngIf="loanForm.get('repaymentTenure')?.errors.max">Repayment Tenure should not exceed 360 months.</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="eligibility">Eligibility</label>
+          <input id="eligibility" formControlName="eligibility" class="form-control" />
+          <div *ngIf="loanForm.get('eligibility')?.invalid && loanForm.get('eligibility')?.touched" class="validation-message">
+              Eligibility is required.
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="documentsRequired">Documents Required</label>
+          <input id="documentsRequired" formControlName="documentsRequired" class="form-control" />
+          <div *ngIf="loanForm.get('documentsRequired')?.invalid && loanForm.get('documentsRequired')?.touched" class="validation-message">
+              Documents Required is required.
+          </div>
+      </div>
+
+      <div *ngIf="loanForm.invalid && loanForm.touched" class="error-message">
+          All fields are required.
+      </div>
+
+      <div class="button-container">
+        <button type="submit" class="btn-primary" [disabled]="loanForm.invalid">Submit</button>
+    </div>
+
+  </form>
+
+  <!-- Success Message Dialog -->
+  <div *ngIf="successMessage" class="success-dialog">
+      <p>Successfully Added!</p>
+      <button (click)="closeSuccessMessage()" class="btn btn-success">OK</button>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<app-usernav></app-usernav>
+<div class="container mt-5 pt-5 text-center">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Welcome to FarmAid</h1>
+      <p>Your one-stop solution for all farming needs.</p>
+      <a routerLink="/api/game" class="btn btn-success">Play Mini Farming Game</a>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <h2>Latest News</h2>
+      <div class="news-cards">
+        <div *ngFor="let article of newsArticles" class="news-card">
+          <img [src]="article.image_url" alt="News Image" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text">{{ article.description }}</p>
+            <p><em><strong>{{ article.pubDate | date }}</strong></em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <footer class="footer">
+  <div class="container">
+    <p>&copy; 2024 FarmAid. All rights reserved.</p>
+  </div>
+</footer> -->
+<footer class="footer">
+  <div class="left">
+      <a routerLink="/api/about">About Us</a>
+      <a routerLink="/api/contact">Contact Us</a>
+  </div>
+  <div class="right">
+      <img src="assets/logo.png" alt="Logo">
+  </div>
+  <div class="copyright">
+      &copy; 2024 FarmAid. All rights reserved.
+  </div>
+  <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+      &#8679;
+  </div>
+</footer>
